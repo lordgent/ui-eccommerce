@@ -1,5 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import cartReducer from './reducers/cart_action';
+import loadingReducer from './reducers/loading_action'
+
 import { saveStateToLocalStorage, loadStateFromLocalStorage } from '../utils/localStorage';
 
 const preloadedState = {
@@ -9,6 +11,8 @@ const preloadedState = {
 export const store = configureStore({
   reducer: {
     cart: cartReducer,
+    loading: loadingReducer,
+
   },
   preloadedState, 
 });
