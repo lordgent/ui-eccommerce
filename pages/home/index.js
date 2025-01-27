@@ -12,14 +12,14 @@ const HomePage = () => {
   console.log(services);
   return (
     <Layout>
-<div className="flex flex-col lg:flex-row gap-4">
-  <div className="w-full lg:w-2/3">
-    <img src="/images/banner-big.png" alt="My Image" className="w-full h-auto" />
+<div className="flex gap-4">
+  <div className="">
+    <img src="/images/banner-big.png" alt="My Image"  />
   </div>
-  <div className="w-full lg:w-1/3">
-    <div className="grid gap-6 sm:grid-cols-2">
-      <img src="/images/banner-small-1.png" alt="My Image" className="w-full h-auto" />
-      <img src="/images/banner-small-2.png" alt="My Image" className="w-full h-auto" />
+  <div className="">
+    <div className="grid gap-6 ">
+      <img src="/images/banner-small-1.png" alt="My Image" />
+      <img src="/images/banner-small-2.png" alt="My Image" />
     </div>
   </div>
 </div>
