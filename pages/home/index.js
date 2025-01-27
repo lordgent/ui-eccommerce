@@ -6,7 +6,7 @@ import {
   CategoryComponent,
   ProductsComponent,
   FlashSaleComponent,
-} from "./components";
+} from "../../components/pages/home";
 
 const HomePage = () => {
   console.log(services);
