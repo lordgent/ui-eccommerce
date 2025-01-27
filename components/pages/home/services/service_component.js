@@ -4,7 +4,7 @@ const ServiceComponent = ({ services }) => {
   return (
     <div className='mt-6 p-6 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-2 bg-white shadow-md rounded items-center'>
     {
-         services.map(item => 
+       services.length > 0 &&  services.map(item => 
                 <div key={item.id} className='flex items-center gap-4'>
                     <img src={item.icon} alt="icon-" />
                     <div>

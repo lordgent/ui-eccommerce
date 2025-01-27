@@ -1,22 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const FlashSaleComponent = ({ promo }) => {
-  const [currentTime, setCurrentTime] = useState(null);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTime(new Date());
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const formatTime = (date) => {
-    const hours = String(date.getHours()).padStart(2, "0");
-    const minutes = String(date.getMinutes()).padStart(2, "0");
-    const seconds = String(date.getSeconds()).padStart(2, "0");
-    return `${hours}:${minutes}:${seconds}`;
-  };
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-2">
@@ -25,7 +10,11 @@ const FlashSaleComponent = ({ promo }) => {
           <div
             key={item.id}
             className="flex flex-col items-center gap-2 p-4 rounded h-[500px]"
-            style={{ backgroundImage: `url(${item.bg})` }}
+            style={{
+              backgroundImage: item.bg ? `url(${item.bg})` : 'url(/default-bg.jpg)', // Fallback background
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
           >
             <p className="text-white text-[17px]">{item.slogan}</p>
             <div>
@@ -33,11 +22,7 @@ const FlashSaleComponent = ({ promo }) => {
             </div>
 
             <div>
-              {item.category === "time" && currentTime && (
-                <p className="text-white text-[30px] text-lg font-semibold">
-                  {formatTime(currentTime)}
-                </p>
-              )}
+         
               {item.category === "price" && (
                 <p className="text-white text-[30px] text-lg font-semibold">
                   Rp.{item.value.toLocaleString("id-ID")}

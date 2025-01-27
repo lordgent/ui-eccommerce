@@ -3,7 +3,8 @@ const services = [
       id: 1,
       name: 'Free Shipping',
       description: 'Free shipping on all your order',
-      icon: '/icons/delivery-truck.svg'
+      icon: '/icons/delivery-truck.svg',
+      
     },
     {
      id: 2,

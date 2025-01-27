@@ -3,9 +3,9 @@ const promo = [
         id: 1,
         name: 'Sale of the Month',
         slogan: 'Best Deals',
-        category: 'time',
+        category: 'price',
         bg: '/images/bg-vegetables.png',
-        value: '2025-01-27T15:30:00', 
+          value: '330.000'
     },
     {
         id: 2,
