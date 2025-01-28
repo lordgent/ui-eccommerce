@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { ChevronDownIcon, PhoneIcon } from "lucide-react";
 
 const Navbar = ({ cartTotal, totalPrice }) => {
   const [isClient, setIsClient] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    setIsClient(true); 
+    setIsClient(true);
   }, []);
 
   if (!isClient) {
@@ -67,6 +69,61 @@ const Navbar = ({ cartTotal, totalPrice }) => {
           </div>
         </div>
       </div>
+
+      <div className="w-full text-grey-800 bg-white md:text-white h-auto px-4 md:px-10 md:bg-gray-800 flex py-2 flex-row-reverse  md:flex-row items-center justify-between text-center">
+        <button
+          className="md:hidden p-2 w-4 h-4 md:text-white sm:text-gray-800"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </button>
+        <ul className={`flex flex-col md:flex-row md:space-x-6 md:block hidden md:flex`}>
+          <li className="relative group flex items-center">
+            <Link href="#" className="flex items-center space-x-1">Home <ChevronDownIcon size={16} /></Link>
+          </li>
+          <li className="relative group flex items-center">
+            <Link href="#" className="flex items-center space-x-1">Shop <ChevronDownIcon size={16} /></Link>
+          </li>
+          <li className="relative group flex items-center">
+            <Link href="#" className="flex items-center space-x-1">Pages <ChevronDownIcon size={16} /></Link>
+          </li>
+          <li className="relative group flex items-center">
+            <Link href="#" className="flex items-center space-x-1">Blog <ChevronDownIcon size={16} /></Link>
+          </li>
+          <li>
+            <Link href="#">About Us</Link>
+          </li>
+          <li>
+            <Link href="#">Contact Us</Link>
+          </li>
+        </ul>
+        <div className="flex items-center space-x-2 mt-4 md:mt-0">
+          <PhoneIcon size={20} />
+          <span>(219) 555-0114</span>
+        </div>
+      </div>
+      {/* == */}
+      <ul className={` ${menuOpen? 'flex-col tex-center gap-6 justify-center items-center' : 'hidden'} `}>
+          <li className=" flex justify-center items-center">
+            <Link href="#" className="text-center">Home </Link>
+          </li>
+          <li className=" flex justify-center items-center">
+            <Link href="#" className="text-center">Shop </Link>
+          </li>
+          <li className=" flex justify-center items-center">
+            <Link href="#" className="text-center">Pages </Link>
+          </li>
+          <li className=" flex justify-center items-center">
+            <Link href="#" className="text-center">Blog </Link>
+          </li>
+            <li className=" flex justify-center items-center">
+            <Link href="#">About Us</Link>
+          </li>
+            <li className=" flex justify-center items-center">
+            <Link href="#">Contact Us</Link>
+          </li>
+        </ul>
+      {/*  */}
     </div>
   );
 };

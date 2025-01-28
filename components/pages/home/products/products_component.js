@@ -17,7 +17,9 @@ const ProductsComponent = ({products,handleAddToCart}) => {
           <h2 className="text-lg font-semibold text-gray-800">
             {product.name}
           </h2>
-          <p className="text-gray-600 text-sm mt-1">${product.price.toFixed(2)}</p>
+          <p className="text-gray-600 text-sm mt-1">
+          {product.price.toLocaleString("en-US", { style: "currency", currency: "USD" })}
+        </p>
           <div className="flex items-center mt-2">
           <div className="flex text-yellow-400">
   {Array.from({ length: 5 }, (_, i) => (

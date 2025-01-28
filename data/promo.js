@@ -5,7 +5,7 @@ const promo = [
         slogan: 'Best Deals',
         category: 'price',
         bg: '/images/bg-vegetables.png',
-          value: '330.000'
+        value: 29.0
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ const promo = [
         slogan: '85% Fat Free',
         category: 'price',
         bg: '/images/bg-meat.png',
-        value: '500.000'
+        value: 40.0
     },
     {
         id: 3,

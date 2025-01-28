@@ -1,8 +1,7 @@
-// reducers/loading_action.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  isLoading: true, // Memulai dengan true agar loading muncul saat halaman pertama kali dimuat
+  isLoading: true, 
 };
 
 const loadingSlice = createSlice({
@@ -10,10 +9,10 @@ const loadingSlice = createSlice({
   initialState,
   reducers: {
     startLoading: (state) => {
-      state.isLoading = true; // Set isLoading ke true saat mulai loading
+      state.isLoading = true; 
     },
     stopLoading: (state) => {
-      state.isLoading = false; // Set isLoading ke false saat selesai loading
+      state.isLoading = false; 
     },
   },
 });

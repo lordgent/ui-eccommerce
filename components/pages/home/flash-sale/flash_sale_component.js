@@ -23,9 +23,9 @@ const FlashSaleComponent = ({ promo }) => {
 
             <div>
          
-              {item.category === "price" && (
+            {item.category === "price" && (
                 <p className="text-white text-[30px] text-lg font-semibold">
-                  Rp.{item.value.toLocaleString("id-ID")}
+                  {item.value.toLocaleString("en-US", { style: "currency", currency: "USD" })}
                 </p>
               )}
               {item.category === "percentage" && (
