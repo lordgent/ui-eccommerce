@@ -55,11 +55,11 @@ const CartPage = () => {
                 </div>
                 <div className="flex flex-col items-end gap-2">
                   <div className="flex items-center">
-                    <button onClick={() => updateQuantity(item.id, item.qty - 1)} className="px-2 py-1 bg-gray-200 rounded-lg hover:bg-gray-300">
+                    <button onClick={() => updateQuantity(item.id, item.qty - 1)} className="bg-gray-200 text-xl w-8 h-8 rounded-l">
                       -
                     </button>
                     <span className="px-4 font-medium text-lg">{item.qty}</span>
-                    <button onClick={() => updateQuantity(item.id, item.qty + 1)} className="px-2 py-1 bg-gray-200 rounded-lg hover:bg-gray-300">
+                    <button onClick={() => updateQuantity(item.id, item.qty + 1)} className="bg-gray-200 text-xl w-8 h-8 rounded-l">
                       +
                     </button>
                   </div>
