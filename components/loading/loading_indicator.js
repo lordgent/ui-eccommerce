@@ -20,11 +20,10 @@ const LoadingIndicator = () => {
   if (!isLoading) return null;
 
   return (
-    <div className="loading-container">
-    <div className="car">
-      <img src="/icons/delivery-truck.svg" alt="Car" className="car" />
-    </div>
+    <div class="spinner-container">
+    <div class="spinner"></div>
   </div>
+  
   );
 };
 
