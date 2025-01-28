@@ -35,6 +35,9 @@ const CartPage = () => {
   if (!isClient) {
     return null;
   }
+  const handlePay = () => {
+    window.location.href = "/login"
+  }
 
   return (
     <Layout>
@@ -87,7 +90,7 @@ const CartPage = () => {
                 <p className="text-gray-500 text-[14px]">$0</p>
               </div>
             </div>
-            <button className="bg-green-500 text-white p-3 rounded-lg hover:bg-green-600 transition duration-300">
+            <button className="bg-green-500 text-white p-3 rounded-lg hover:bg-green-600 transition duration-300" onClick={handlePay}>
               Proceed to checkout
             </button>
           </div>
